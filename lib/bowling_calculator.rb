@@ -3,9 +3,11 @@ class BowlingCalculator
     @balls = []
   end
 
-  def score
-    frame = @balls.reduce(0, :+)
-    frame == 10 ? nil : frame
+  def [](index)
+    return nil unless @balls.size.even?
+    return nil if @balls.last(2).reduce(:+) == 10
+
+    @balls.reduce(:+)
   end
 
   def <<(ball)
