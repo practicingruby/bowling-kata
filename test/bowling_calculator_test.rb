@@ -26,4 +26,11 @@ describe BowlingCalculator do
 
     calculator.score.must_be_nil
   end
+
+  it 'should have a score of 18 after a resolved spare [3,7,4]' do
+    calculator << 3
+    calculator << 7
+    calculator << 4
+    calculator.score.must_equal(18)
+  end
 end
