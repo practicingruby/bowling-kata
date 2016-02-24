@@ -22,7 +22,7 @@ describe BowlingCalculator do
   
   it "should not compute score if there is an unresolved spare" do
     calculator << 3
-    calculator << 9
+    calculator << 7
 
     calculator.score.must_be_nil
   end
