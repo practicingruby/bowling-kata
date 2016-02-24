@@ -1,8 +1,13 @@
 class BowlingCalculator
+  def initialize
+    @balls = []
+  end
+
   def score
-    0
+    @balls.reduce(0, :+)
   end
 
   def <<(ball)
+    @balls << ball
   end
 end

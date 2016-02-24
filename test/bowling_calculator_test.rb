@@ -12,4 +12,11 @@ describe BowlingCalculator do
     calculator << 3
     calculator.score.must_equal(3)
   end
+
+  it "should have a score of 9 after [3,6] rolled in first frame" do
+    calculator << 3
+    calculator << 6
+
+    calculator.score.must_equal(9)
+  end
 end
