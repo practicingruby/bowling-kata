@@ -27,10 +27,10 @@ describe BowlingCalculator do
     calculator[1].must_be_nil # frame isn't complete yet
   end
 
-  it 'should have a score of 18 after a resolved spare [3,7,4]' do
+  it 'should have a first frame score of 14 after a resolved spare [3,7,4]' do
     calculator << 3
     calculator << 7
     calculator << 4
-    calculator[1].must_equal(18)
+    calculator[1].must_equal(14)
   end
 end

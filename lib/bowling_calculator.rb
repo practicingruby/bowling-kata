@@ -1,16 +1,20 @@
+require_relative "frame"
+
 class BowlingCalculator
   def initialize
-    @balls = []
+    @balls         = []
+    @frames        = [Frame.new(0, @balls)]       
   end
 
   def [](index)
-    return nil unless @balls.size.even?
-    return nil if @balls.last(2).reduce(:+) == 10
-
-    @balls.reduce(:+)
+    @frames[index-1].score
   end
 
   def <<(ball)
     @balls << ball
+
+    if @balls.size.even?
+      @frames << Frame.new(@balls.size, @balls)
+    end
   end
 end
