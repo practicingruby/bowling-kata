@@ -19,4 +19,11 @@ describe BowlingCalculator do
 
     calculator.score.must_equal(9)
   end
+  
+  it "should not compute score if there is an unresolved spare" do
+    calculator << 3
+    calculator << 9
+
+    calculator.score.must_be_nil
+  end
 end
