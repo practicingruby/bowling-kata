@@ -9,6 +9,7 @@ describe BowlingCalculator do
   end
 
   it 'should have a score of 3 when 3 pins are knocked down on the first ball' do
+    calculator << 3
     calculator.score.must_equal(3)
   end
 end
