@@ -4,7 +4,8 @@ class BowlingCalculator
   end
 
   def score
-    @balls.reduce(0, :+)
+    frame = @balls.reduce(0, :+)
+    frame > 10 ? nil : frame
   end
 
   def <<(ball)
