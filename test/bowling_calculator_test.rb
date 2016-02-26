@@ -44,13 +44,17 @@ describe BowlingCalculator do
     calculator[2].must_equal(7)
   end
 
-  it 'can compute f1(10)=17 f2(3,4)=7' do
+
+  it 'can compute f1(10)=17 f2(3,4)=7 f3(5,2)' do
     calculator << 10
     calculator << 3
     calculator << 4
+    calculator << 5
+    calculator << 2
 
     calculator[1].must_equal(17)
-    calculator[2].must_equal(7) # TODO
+    calculator[2].must_equal(7)
+    calculator[3].must_equal(7)
   end
 
 
