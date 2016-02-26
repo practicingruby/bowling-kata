@@ -68,4 +68,10 @@ describe BowlingCalculator do
     calculator[3].must_equal(7)
   end
 
+  it 'can compute a perfect game' do
+    12.times.map { calculator << 10 }
+
+    (1..10).reduce(0) { |s,r| s + calculator[r] }.must_equal(300)
+  end
+
 end
