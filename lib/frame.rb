@@ -23,4 +23,9 @@ class Frame
       first + second
     end
   end
+
+  def start_next_frame?
+    ball1, ball2 = @balls.slice(@index, 2)
+    ball1 == 10 || !ball2.nil?
+  end
 end
