@@ -1,0 +1,2 @@
+require_relative "bowling_calculator_test"
+require_relative "frame_test"
