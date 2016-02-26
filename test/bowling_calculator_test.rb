@@ -50,7 +50,7 @@ describe BowlingCalculator do
     calculator << 4
 
     calculator[1].must_equal(17)
-    calculator[2].must_equal(7)
+    calculator[2].must_equal(7) # TODO
   end
 
 
