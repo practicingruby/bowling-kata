@@ -5,19 +5,15 @@ class Frame
   end
 
   def score
-    return nil unless @balls.size >= @index + 2
-
     first, second, third = @balls.slice(@index, 3)
-    third = third.to_i
-    
-    case
-    when first + second == 10
-      bonus = @balls[@index+2]
-      
-      return nil unless bonus 
 
-      first + second + bonus
-    when first == 10 && second + third < 10
+    return nil unless second
+
+    strike_or_spare = (first == 10 || first + second == 10)
+
+    if strike_or_spare
+      return nil unless third
+
       first + second + third
     else
       first + second
