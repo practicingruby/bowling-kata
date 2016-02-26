@@ -13,7 +13,7 @@ class BowlingCalculator
   def <<(ball)
     @balls << ball
 
-    if @balls.size.even?
+    if @balls.size.even? || ball == 10
       @frames << Frame.new(@balls.size, @balls)
     end
   end
